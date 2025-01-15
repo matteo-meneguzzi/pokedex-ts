@@ -19,6 +19,7 @@ export async function commandCatch (state: State, ...args: string[]): Promise<vo
         if (captureCohefficient <= 0.3)
         {
             console.log(`${ pokemonData.name } was caught!`);
+            console.log("You may now inspect it with the inspect command.");
             state.pokedex[pokemonData.name] = pokemonData
         } else
         {
