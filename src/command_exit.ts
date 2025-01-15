@@ -1,9 +1,8 @@
-import { CLICommand, State } from "./state.js";
-import { type Interface } from "readline";
+import { State } from "./state.js";
 
-export function commandExit (state: State)
+export async function commandExit (state: State): Promise<void>
 {
     console.log("Closing the Pokedex... Goodbye!");
-    state.rl.close()
+    state.readline.close()
     process.exit(0)
 };
